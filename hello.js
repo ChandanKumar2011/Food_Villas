@@ -111,26 +111,26 @@ const fetch = require("node-fetch");
 //const root = ReactDOM.createRoot(document.getElementById('root'));
 //root.render(<SecondMessage/>)
 
-//let accessToken;
+let accessToken;
 
-//fetch("http://localhost:8000/api/login",{
-   //method: "POST",
-  // headers: {
-     // "Content-type": "application/json; charset=UTF-8",
+fetch("http://localhost:8000/api/login",{
+   method: "POST",
+   headers: {
+      "Content-type": "application/json; charset=UTF-8",
 
-  // },
-   //body: JSON.stringify({
-   ////   email: "abc@gmail.com",
-   //   password: "Geeks1234"
-   //})
-//}).then((res) => res.json())
-//.then((data) => {
-  // accessToken = data.accessToken;
-   //.setItem("token", accessToken);
-//});
+   },
+ body: JSON.stringify({
+      email: "abc@gmail.com",
+      password: "Geeks1234"
+   })
+}).then((res) => res.json())
+.then((data) => {
+   accessToken = data.accessToken;
+   localStorage.setItem("token", accessToken);
+ });
 
-//const token = localStorage.getItem("token");
-//console.log(token);
+const token = localStorage.getItem("token");
+console.log(token);
 
 
 
