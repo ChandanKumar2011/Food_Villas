@@ -122,15 +122,16 @@ fetch("https://food-villas.onrender.com//api/login",{
  body: JSON.stringify({
       email: "abc@gmail.com",
       password: "Geeks1234"
-   })
-}).then((res) => res.json())
+   }),
+})
+.then((res) => res.json())
 .then((data) => {
    accessToken = data.accessToken;
-   localStorage.setItem("token", accessToken);
+   //localStorage.setItem("token", accessToken);
  });
 
-const token = localStorage.getItem("token");
-console.log(token);
+//const token = localStorage.getItem("token");
+//console.log(token);
 
 
 
